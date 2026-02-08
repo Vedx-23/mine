@@ -1,141 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Bestie ❤️</title>
-
-<style>
-*{
-  box-sizing:border-box;
-}
-body{
-  margin:0;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(135deg,#ec4adb,#ffd6e8);
-  font-family: 'Poppins', sans-serif;
-  text-align:center;
-}
-int clipPath
-
-.container{
-  background:#fff;
-  padding:30px 25px;
-  border-radius:22px;
-  max-width:360px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.15);
-  animation:fadeIn 1.2s ease;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You ❤️</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  overflow: hidden;
 }
 
-h1{
-  color:#ff3366;
-  margin-bottom:10px;
+.reel-enter {
+  animation: reelIn 1.5s ease;
 }
 
-p{
-  font-size:16px;
-  color:#444;
-  line-height:1.6;
+@keyframes reelIn {
+  from { opacity: 0; transform: scale(1.2); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-button{
-  margin-top:20px;
-  padding:12px 25px;
-  font-size:16px;
-  border:none;
-  border-radius:14px;
-  background:#ff4d88;
-  color:#fff;
-  cursor:pointer;
-  transition:0.3s;
+.heart {
+  position: absolute;
+  color: rgba(255, 77, 109, 0.4);
+  font-size: 20px;
+  animation: float 8s linear infinite;
 }
 
-button:hover{
-  background:#ff1f66;
-  transform:scale(1.05);
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-10vh); }
 }
 
-.heart{
-  font-size:28px;
-  animation:beat 1.2s infinite;
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+  max-width: 380px;
+  position: relative;
+  z-index: 2;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
-@keyframes beat{
-  0%,100%{transform:scale(1);}
-  50%{transform:scale(1.3);}
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #ff4d6d;
 }
 
-@keyframes fadeIn{
-  from{opacity:0; transform:translateY(20px);}
-  to{opacity:1; transform:translateY(0);}
+p {
+  font-size: 17px;
+  color: #444;
+  line-height: 1.7;
 }
-</style>
+
+.messageBox {
+  margin-top: 15px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.firework {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #ff4d6d;
+  border-radius: 50%;
+  animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(15); opacity: 0; }
+}
+
+  </style>
 </head>
-
-<body>
-<div class="container" id="box">
-  <h1>Hey Bestie 🫶</h1>
-  <p>
-    I miss the version of you  
-    jo bina soche reels bhejti thi 🥺  
-    <br><br>
-    Maine ignore kiya…  
-    but truth ye hai ki  
-    main khud thoda lost tha 😔
-  </p>
-  <button onclick="next()">Tap here ❤️</button>
-</div>
-
-<script>
-let step = 0;
-
-function next(){
-  const box = document.getElementById("box");
-
-  if(step === 0){
-    box.innerHTML = `
-      <h1>I'm sorry 😞</h1>
-      <p>
-        Problem thi life me  
-        par share nahi ki…  
-        aur galti ye thi ki  
-        maine tumhe door feel karwaya 💔
-      </p>
-      <button onclick="next()">Still listening? 🤍</button>
-    `;
+<body class="reel-enter"><script>
+  for (let i = 0; i < 25; i++) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+    document.body.appendChild(heart);
   }
-  else if(step === 1){
-    box.innerHTML = `
-      <h1>You matter 🌍</h1>
-      <p>
-        Distance ho ya ego…  
-        kuch bhi ho  
-        tum meri best friend ho  
-        and that will never change 💖
-      </p>
-      <button onclick="next()">One last thing 🫶</button>
-    `;
+</script><div class="card">
+  <h1>Hey kalyani❤️</h1>  <p>
+    I wanted to say this from my heart…
+  </p>  <div class="messageBox">
+    I don’t know when it started… but you slowly became really special to me.<br><br>
+    Talking to you makes my day better.<br><br>
+    Even with distance, I feel connected to you in a way I can’t explain.<br><br>
+    You became my comfort, my happiness, my safe place.<br><br>
+    I don’t know what future holds… but I know what I feel for you is real.<br><br>
+    I want to be honest today… I really like you.<br><br>
+    <b>Will you be mine forever? ❤️</b>
+  </div>
+</div><script>
+  function launchFireworks() {
+    for (let i = 0; i < 25; i++) {
+      let fw = document.createElement('div');
+      fw.className = 'firework';
+      fw.style.left = Math.random() * window.innerWidth + 'px';
+      fw.style.top = Math.random() * window.innerHeight + 'px';
+      document.body.appendChild(fw);
+      setTimeout(() => fw.remove(), 1000);
+    }
   }
-  else{
-    box.innerHTML = `
-      <h1 class="heart">❤️</h1>
-      <p>
-        Agar ek chance mile…  
-        toh main phir se  
-        reels ka reply dunga,  
-        bina delay 😊  
-        <br><br>
-        Miss you, bestie 🤍
-      </p>
-    `;
-    document.body.style.background =
-      "linear-gradient(135deg,#ffb3d9,#ffcce6)";
-  }
-  step++;
-}
-</script>
-</body>
+
+  setTimeout(launchFireworks, 1500);
+</script></body>
 </html>

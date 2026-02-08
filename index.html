@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Bestie ❤️</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ec4adb,#ffd6e8);
+  font-family: 'Poppins', sans-serif;
+  text-align:center;
+}
+int clipPath
+
+.container{
+  background:#fff;
+  padding:30px 25px;
+  border-radius:22px;
+  max-width:360px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.15);
+  animation:fadeIn 1.2s ease;
+}
+
+h1{
+  color:#ff3366;
+  margin-bottom:10px;
+}
+
+p{
+  font-size:16px;
+  color:#444;
+  line-height:1.6;
+}
+
+button{
+  margin-top:20px;
+  padding:12px 25px;
+  font-size:16px;
+  border:none;
+  border-radius:14px;
+  background:#ff4d88;
+  color:#fff;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#ff1f66;
+  transform:scale(1.05);
+}
+
+.heart{
+  font-size:28px;
+  animation:beat 1.2s infinite;
+}
+
+@keyframes beat{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.3);}
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+<div class="container" id="box">
+  <h1>Hey Bestie 🫶</h1>
+  <p>
+    I miss the version of you  
+    jo bina soche reels bhejti thi 🥺  
+    <br><br>
+    Maine ignore kiya…  
+    but truth ye hai ki  
+    main khud thoda lost tha 😔
+  </p>
+  <button onclick="next()">Tap here ❤️</button>
+</div>
+
+<script>
+let step = 0;
+
+function next(){
+  const box = document.getElementById("box");
+
+  if(step === 0){
+    box.innerHTML = `
+      <h1>I'm sorry 😞</h1>
+      <p>
+        Problem thi life me  
+        par share nahi ki…  
+        aur galti ye thi ki  
+        maine tumhe door feel karwaya 💔
+      </p>
+      <button onclick="next()">Still listening? 🤍</button>
+    `;
+  }
+  else if(step === 1){
+    box.innerHTML = `
+      <h1>You matter 🌍</h1>
+      <p>
+        Distance ho ya ego…  
+        kuch bhi ho  
+        tum meri best friend ho  
+        and that will never change 💖
+      </p>
+      <button onclick="next()">One last thing 🫶</button>
+    `;
+  }
+  else{
+    box.innerHTML = `
+      <h1 class="heart">❤️</h1>
+      <p>
+        Agar ek chance mile…  
+        toh main phir se  
+        reels ka reply dunga,  
+        bina delay 😊  
+        <br><br>
+        Miss you, bestie 🤍
+      </p>
+    `;
+    document.body.style.background =
+      "linear-gradient(135deg,#ffb3d9,#ffcce6)";
+  }
+  step++;
+}
+</script>
+</body>
+</html>
